@@ -36,11 +36,13 @@ export default function Footer() {
           <div>
             <p className="text-eyebrow text-paper/50">Find us</p>
             <address className="mt-3 text-lg not-italic leading-relaxed md:text-xl">
-              Jaipur
-              <br />
               Churu
               <br />
-              Remote
+              Sikar
+              <br />
+              Jaipur
+              <br />
+              Bikaner
             </address>
           </div>
 

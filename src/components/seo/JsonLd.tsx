@@ -31,6 +31,14 @@ export default function JsonLd() {
         "telephone": "+917976439089",
         "email": "avadeshagarwal2@gmail.com",
         "priceRange": "$$$",
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Churu" },
+          { "@type": "AdministrativeArea", "name": "Sikar" },
+          { "@type": "AdministrativeArea", "name": "Jaipur" },
+          { "@type": "AdministrativeArea", "name": "Bikaner" },
+          { "@type": "State", "name": "Rajasthan" },
+          { "@type": "Country", "name": "India" }
+        ],
         "address": [
           {
             "@type": "PostalAddress",
@@ -44,6 +52,20 @@ export default function JsonLd() {
             "addressLocality": "Churu",
             "addressRegion": "Rajasthan",
             "postalCode": "331001",
+            "addressCountry": "IN"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Sikar",
+            "addressRegion": "Rajasthan",
+            "postalCode": "332001",
+            "addressCountry": "IN"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Bikaner",
+            "addressRegion": "Rajasthan",
+            "postalCode": "334001",
             "addressCountry": "IN"
           }
         ],

@@ -238,20 +238,25 @@ export default function ContactPage() {
           </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 rule-t border-paper/20 pt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-16 rule-t border-paper/20 pt-16">
           <FadeIn delay={0.1}>
-            <h3 className="text-display text-3xl mb-2">Jaipur</h3>
-            <p className="text-sm text-paper/60">Malviya Nagar, Jaipur, Rajasthan 302017</p>
-          </FadeIn>
-          
-          <FadeIn delay={0.2}>
             <h3 className="text-display text-3xl mb-2">Churu</h3>
             <p className="text-sm text-paper/60">Station Road, Churu, Rajasthan 331001</p>
           </FadeIn>
-          
+
+          <FadeIn delay={0.2}>
+            <h3 className="text-display text-3xl mb-2">Sikar</h3>
+            <p className="text-sm text-paper/60">Station Road, Sikar, Rajasthan 332001</p>
+          </FadeIn>
+
           <FadeIn delay={0.3}>
-            <h3 className="text-display text-3xl mb-2">Remote</h3>
-            <p className="text-sm text-paper/60">Global Remote / Work From Anywhere</p>
+            <h3 className="text-display text-3xl mb-2">Jaipur</h3>
+            <p className="text-sm text-paper/60">Malviya Nagar, Jaipur, Rajasthan 302017</p>
+          </FadeIn>
+
+          <FadeIn delay={0.4}>
+            <h3 className="text-display text-3xl mb-2">Bikaner</h3>
+            <p className="text-sm text-paper/60">Kote Gate, Bikaner, Rajasthan 334001</p>
           </FadeIn>
         </div>
       </section>
