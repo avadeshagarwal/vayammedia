@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design Tokens ────────────────────────────────────────── */
+:root {
+  --color-paper: #fafaf8;
+  --color-ink: #0a0a0a;
+  --color-magenta: #e5007d;
+  --color-smoke: #888888;
+  --outline-color: var(--color-ink);
+}
+
+/* ── Base Reset ───────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scrolling */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-magenta);
+  color: white;
+}
+
+/* ── Typography Classes ───────────────────────────────────── */
+@layer components {
+  .text-display {
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+  }
+
+  .text-eyebrow {
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+  }
+
+  .text-accent-word {
+    font-family: var(--font-accent), Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--color-magenta);
+  }
+
+  .text-hollow {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--outline-color);
+  }
+
+  /* ── Rule (top border) ──────────────────────────────────── */
+  .rule-t {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+
+  /* ── Link Sweep Underline ───────────────────────────────── */
+  .link-sweep {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .link-sweep::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+
+  .link-sweep:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* ── Pill Button ────────────────────────────────────────── */
+  .btn-pill {
+    @apply inline-flex items-center gap-3 rounded-full bg-ink px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-paper transition-all duration-300;
+  }
+
+  .btn-pill:hover {
+    @apply bg-magenta;
+  }
+
+  .btn-pill-outline {
+    @apply inline-flex items-center gap-3 rounded-full border-2 border-ink px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] transition-all duration-300;
+  }
+
+  .btn-pill-outline:hover {
+    @apply border-magenta bg-magenta text-paper;
+  }
+}
+
+/* ── Marquee Animation ────────────────────────────────────── */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 30s) linear infinite;
+}
+
+/* ── Scroll Cue Animation ─────────────────────────────────── */
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(300%);
+  }
+}
+
+.animate-scroll-cue {
+  animation: scroll-cue 2s ease-in-out infinite;
+}
+
+/* ── Smooth Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-magenta);
+  border-radius: 3px;
+}
+
+/* ── Mobile Menu Overlay ──────────────────────────────────── */
+.menu-overlay {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu-overlay.open {
+  clip-path: inset(0 0 0 0);
+}
+
+/* ── Focus Styles ─────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-magenta);
+  outline-offset: 4px;
+}
+
+/* ── Lenis ────────────────────────────────────────────────── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
