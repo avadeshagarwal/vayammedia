@@ -36,11 +36,9 @@ export default function Footer() {
           <div>
             <p className="text-eyebrow text-paper/50">Find us</p>
             <address className="mt-3 text-lg not-italic leading-relaxed md:text-xl">
-              Mumbai
+              Jaipur
               <br />
-              Delhi
-              <br />
-              Bangalore
+              Churu
               <br />
               Remote
             </address>
@@ -63,13 +61,13 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="rule-t flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-paper/20 py-4 text-xs text-paper/50">
-          <p>© {year} Vayam Media Pvt. Ltd.</p>
+          <p>© {year} Vayam Media — Founded by Avadesh Agarwal</p>
           <p>
             <a
-              href="mailto:hello@vayammedia.com"
+              href="mailto:avadeshagarwal2@gmail.com"
               className="link-sweep text-paper/70 transition-colors duration-300 hover:text-magenta"
             >
-              hello@vayammedia.com
+              avadeshagarwal2@gmail.com
             </a>
           </p>
         </div>

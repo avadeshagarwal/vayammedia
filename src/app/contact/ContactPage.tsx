@@ -173,33 +173,39 @@ export default function ContactPage() {
           <div className="md:col-span-2 pt-12 md:pt-0 pl-0 md:pl-12 md:border-l-2 md:border-ink/10">
             <FadeIn delay={0.2}>
               <div>
+                <p className="text-eyebrow mb-2">Founder</p>
+                <p className="text-xl font-semibold">Avadesh Agarwal</p>
+              </div>
+
+              <div className="mt-8">
                 <p className="text-eyebrow mb-2">Email</p>
-                <a href="mailto:hello@vayammedia.com" className="text-xl link-sweep inline-block">
-                  hello@vayammedia.com
+                <a href="mailto:avadeshagarwal2@gmail.com" className="text-xl link-sweep inline-block">
+                  avadeshagarwal2@gmail.com
                 </a>
               </div>
               
-              <div className="mt-10">
+              <div className="mt-8">
                 <p className="text-eyebrow mb-2">Phone</p>
-                <p className="text-xl">+91 98765 43210</p>
+                <a href="tel:+917976439089" className="text-xl link-sweep inline-block">
+                  +91 79764 39089
+                </a>
               </div>
 
-              <div className="mt-10">
+              <div className="mt-8">
                 <p className="text-eyebrow mb-2">Offices</p>
                 <p className="text-lg text-ink/70 leading-relaxed">
-                  Mumbai<br />
-                  Delhi<br />
-                  Bangalore<br />
+                  Jaipur<br />
+                  Churu<br />
                   Remote
                 </p>
               </div>
 
-              <div className="mt-10">
+              <div className="mt-8">
                 <p className="text-eyebrow mb-2">Follow us</p>
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-lg link-sweep inline-block">
-                      Instagram
+                    <a href="https://instagram.com/vayammedia" target="_blank" rel="noopener noreferrer" className="text-lg link-sweep inline-block">
+                      Instagram (@vayammedia)
                     </a>
                   </li>
                   <li>
@@ -227,25 +233,25 @@ export default function ContactPage() {
         
         <FadeIn delay={0.2}>
           <h2 className="text-5xl md:text-7xl text-display">
-            Three cities,{" "}
-            <span className="text-accent-word normal-case">one mission.</span>
+            Rajasthan &amp; Remote,{" "}
+            <span className="text-accent-word normal-case">one vision.</span>
           </h2>
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 rule-t border-paper/20 pt-16">
           <FadeIn delay={0.1}>
-            <h3 className="text-display text-3xl mb-2">Mumbai</h3>
-            <p className="text-sm text-paper/60">Andheri West, Mumbai 400053</p>
+            <h3 className="text-display text-3xl mb-2">Jaipur</h3>
+            <p className="text-sm text-paper/60">Malviya Nagar, Jaipur, Rajasthan 302017</p>
           </FadeIn>
           
           <FadeIn delay={0.2}>
-            <h3 className="text-display text-3xl mb-2">Delhi</h3>
-            <p className="text-sm text-paper/60">Connaught Place, New Delhi 110001</p>
+            <h3 className="text-display text-3xl mb-2">Churu</h3>
+            <p className="text-sm text-paper/60">Station Road, Churu, Rajasthan 331001</p>
           </FadeIn>
           
           <FadeIn delay={0.3}>
-            <h3 className="text-display text-3xl mb-2">Bangalore</h3>
-            <p className="text-sm text-paper/60">Indiranagar, Bangalore 560038</p>
+            <h3 className="text-display text-3xl mb-2">Remote</h3>
+            <p className="text-sm text-paper/60">Global Remote / Work From Anywhere</p>
           </FadeIn>
         </div>
       </section>
@@ -255,10 +261,10 @@ export default function ContactPage() {
         <FadeIn>
           <p className="text-eyebrow mb-6">Prefer email?</p>
           <h2 className="text-4xl md:text-6xl text-display mb-12 max-w-3xl">
-            Drop us a line at hello@vayammedia.com
+            Drop us a line at avadeshagarwal2@gmail.com
           </h2>
           <MagneticButton strength={0.3} className="inline-block">
-            <a href="mailto:hello@vayammedia.com" className="btn-pill-outline border-paper text-paper hover:bg-paper hover:text-magenta">
+            <a href="mailto:avadeshagarwal2@gmail.com" className="btn-pill-outline border-paper text-paper hover:bg-paper hover:text-magenta">
               Open email
             </a>
           </MagneticButton>

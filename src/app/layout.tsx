@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     siteName: "Vayam Media",
     type: "website",
   },
+  authors: [{ name: "Avadesh Agarwal", url: "https://instagram.com/vayammedia" }],
   twitter: {
     card: "summary_large_image",
     title: "Vayam Media — Fuel your digital growth.",

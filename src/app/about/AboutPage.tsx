@@ -40,7 +40,7 @@ export default function AboutPage() {
   ];
 
   const roles = [
-    { title: "Strategy & Growth", dept: "Leadership", gradient: "from-magenta to-purple-600" },
+    { title: "Avadesh Agarwal", dept: "Founder & Growth Lead", gradient: "from-magenta to-purple-600" },
     { title: "Performance Marketing", dept: "Media Buying", gradient: "from-blue-500 to-cyan-400" },
     { title: "Creative & Content", dept: "Design & Copy", gradient: "from-orange-500 to-yellow-400" },
     { title: "Technology & Dev", dept: "Engineering", gradient: "from-green-500 to-teal-400" }
@@ -69,7 +69,7 @@ export default function AboutPage() {
           <FadeIn>
             <span className="text-eyebrow block mb-8">Our story</span>
             <p className="text-3xl md:text-4xl leading-snug font-medium">
-              Vayam Media was born from a shared frustration with agencies that prioritize vanity metrics over real business growth. We saw a gap for a true growth partner.
+              Vayam Media was founded by Avadesh Agarwal out of a frustration with agencies that prioritize vanity metrics over real business growth. We saw a gap for a true performance growth partner.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -81,7 +81,7 @@ export default function AboutPage() {
                 Our approach is rooted in transparent reporting and treating our clients&apos; budgets as if they were our own. We refuse to hide behind complex jargon or confusing dashboards. If a campaign isn&apos;t working, we tell you, we fix it, and we move forward together.
               </p>
               <p>
-                Today, Vayam Media is a collective of senior digital specialists spanning Mumbai, Delhi, Bangalore, and remote locations, all united by one goal: driving measurable success for ambitious brands.
+                Today, Vayam Media is led by Avadesh Agarwal and a collective of senior digital specialists spanning Jaipur, Churu, and remote locations globally, all united by one goal: driving measurable success for ambitious brands.
               </p>
             </div>
           </FadeIn>

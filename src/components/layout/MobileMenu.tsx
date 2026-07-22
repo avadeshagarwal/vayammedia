@@ -64,10 +64,10 @@ export default function MobileMenu({ open, onClose, links }: MobileMenuProps) {
           >
             <p className="text-eyebrow text-paper/50">Get in touch</p>
             <a
-              href="mailto:hello@vayammedia.com"
+              href="mailto:avadeshagarwal2@gmail.com"
               className="mt-2 block text-lg text-paper/80 transition-colors hover:text-magenta"
             >
-              hello@vayammedia.com
+              avadeshagarwal2@gmail.com
             </a>
           </motion.div>
         </motion.div>
