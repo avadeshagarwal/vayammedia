@@ -53,7 +53,7 @@ export default function AboutPage() {
         <FadeIn>
           <span className="text-eyebrow mb-6 block">About us</span>
         </FadeIn>
-        <h1 className="text-display text-[13.5vw] md:text-[11.5vw] leading-[0.85]">
+        <h1 className="text-display text-[11.5vw] md:text-[9.5vw] lg:text-[8.5vw] leading-[0.85]">
           <RevealText>
             <span>We don&apos;t do</span>
             <span>

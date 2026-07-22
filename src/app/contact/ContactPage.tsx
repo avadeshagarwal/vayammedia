@@ -41,7 +41,7 @@ export default function ContactPage() {
         <FadeIn>
           <p className="text-eyebrow mb-6">Contact</p>
         </FadeIn>
-        <RevealText className="text-[13.5vw] md:text-[11.5vw] text-display leading-[0.85] tracking-tight">
+        <RevealText className="text-[11.5vw] md:text-[9.5vw] lg:text-[8.5vw] text-display leading-[0.85] tracking-tight">
           <span>Let&apos;s</span>
           <span>
             <span className="text-accent-word normal-case">talk.</span>

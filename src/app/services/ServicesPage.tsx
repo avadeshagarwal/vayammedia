@@ -122,7 +122,7 @@ export default function ServicesPage() {
           <p className="text-eyebrow text-ink/60 mb-6">Our services</p>
         </FadeIn>
         
-        <RevealText className="text-[13.5vw] md:text-[11.5vw] text-display leading-none mb-8 text-ink">
+        <RevealText className="text-[11.5vw] md:text-[9.5vw] lg:text-[8.5vw] text-display leading-none mb-8 text-ink">
           <span>Everything you need</span>
           <span>
             to <span className="text-accent-word lowercase">grow.</span>

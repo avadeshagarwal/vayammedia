@@ -57,7 +57,7 @@ export default function HomePage() {
 
         <div className="max-w-[90vw]">
           <span className="text-eyebrow block mb-6">Vayam Media — Growth Driven Digital Marketing Agency</span>
-          <h1 className="text-display text-[13.5vw] md:text-[11.5vw] leading-none mb-8">
+          <h1 className="text-display text-[11.5vw] md:text-[9.5vw] lg:text-[8.5vw] leading-none mb-8">
             <RevealText stagger={0.1}>
               <span>Fuel your</span>
               <span>

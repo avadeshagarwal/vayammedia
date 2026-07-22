@@ -52,7 +52,7 @@ export default function CaseStudiesPage() {
         <FadeIn>
           <span className="text-eyebrow text-smoke mb-6 block">Our work</span>
         </FadeIn>
-        <RevealText className="text-[13.5vw] md:text-[11.5vw] text-display leading-none mb-6">
+        <RevealText className="text-[11.5vw] md:text-[9.5vw] lg:text-[8.5vw] text-display leading-none mb-6">
           <span>Results that</span>
           <span><span className="text-accent-word normal-case">speak.</span></span>
         </RevealText>

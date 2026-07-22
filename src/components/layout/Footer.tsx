@@ -75,7 +75,7 @@ export default function Footer() {
 
       {/* Giant Brand Name */}
       <div className="select-none overflow-hidden pb-2" aria-hidden="true">
-        <p className="text-display whitespace-nowrap text-center text-[18.5vw] leading-[0.8] text-paper transition-colors duration-500 hover:text-magenta">
+        <p className="text-display whitespace-nowrap text-center text-[12.5vw] md:text-[12vw] tracking-tighter leading-[0.8] text-paper transition-colors duration-500 hover:text-magenta">
           Vayam Media
         </p>
       </div>
