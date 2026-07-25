@@ -7,33 +7,7 @@ import RevealText from '@/components/animations/RevealText';
 import Marquee from '@/components/animations/Marquee';
 import MagneticButton from '@/components/animations/MagneticButton';
 import { cn } from '@/lib/utils';
-
-const caseStudies = [
-  {
-    client: "Zenith Labs",
-    services: "Google Ads • Landing Pages",
-    result: "312% increase in qualified leads within 90 days",
-    gradient: "from-magenta/80 to-purple-900"
-  },
-  {
-    client: "Prism Commerce",
-    services: "Shopify Development • SEO",
-    result: "2.4x revenue growth after store relaunch",
-    gradient: "from-blue-600 to-cyan-400"
-  },
-  {
-    client: "Nova Fitness",
-    services: "Meta Ads • Content Creation",
-    result: "Cost per acquisition reduced by 67%",
-    gradient: "from-orange-500 to-yellow-400"
-  },
-  {
-    client: "Meridian Tech",
-    services: "Performance Marketing • AI Automation",
-    result: "$2.1M in pipeline generated in Q1",
-    gradient: "from-emerald-600 to-teal-400"
-  }
-];
+import { caseStudiesData as caseStudies } from '@/lib/case-studies-data';
 
 const marqueeStats = [
   "312% More Leads", 
@@ -68,14 +42,17 @@ export default function CaseStudiesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           {caseStudies.map((cs, idx) => (
             <FadeIn key={idx} delay={idx * 0.1}>
-              <div className="group cursor-pointer">
+              <Link href={`/case-studies/${cs.slug}`} className="group cursor-pointer block">
                 <div className="aspect-[16/10] rounded-2xl overflow-hidden mb-6 relative">
                   <div className={cn("absolute inset-0 bg-gradient-to-br transition-transform duration-500 group-hover:scale-105", cs.gradient)} />
                 </div>
-                <h3 className="text-display text-xl md:text-2xl">{cs.client}</h3>
+                <h3 className="text-display text-xl md:text-2xl group-hover:text-magenta transition-colors">{cs.client}</h3>
                 <p className="text-eyebrow text-smoke mt-3">{cs.services}</p>
                 <p className="text-lg md:text-xl text-ink/70 mt-3">{cs.result}</p>
-              </div>
+                <span className="inline-block mt-4 text-sm font-medium text-magenta hover:text-ink transition-colors">
+                  Read case study &rarr;
+                </span>
+              </Link>
             </FadeIn>
           ))}
         </div>
