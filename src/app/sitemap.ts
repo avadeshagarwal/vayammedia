@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { servicesData } from "@/lib/services-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://vayammedia.com";
@@ -34,5 +35,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    ...servicesData.map((service) => ({
+      url: `${baseUrl}/services/${service.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }
