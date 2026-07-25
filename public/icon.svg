@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="0%" r="100%" fx="50%" fy="0%">
+      <stop offset="0%" stop-color="#1A1A24" />
+      <stop offset="100%" stop-color="#050505" />
+    </radialGradient>
+    <linearGradient id="gradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007A" />
+      <stop offset="100%" stop-color="#7928CA" />
+    </linearGradient>
+    <linearGradient id="gradRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2E93" />
+      <stop offset="100%" stop-color="#FF8A00" />
+    </linearGradient>
+    <filter id="ambientGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="24" result="blur" />
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#FF007A" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="120" fill="#FF007A" opacity="0.15" filter="url(#ambientGlow)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Right Ribbon (Behind) -->
+    <line x1="360" y1="150" x2="232" y2="362" stroke="url(#gradRight)" stroke-width="56" stroke-linecap="round" />
+    <!-- Left Ribbon (Front) -->
+    <line x1="152" y1="150" x2="280" y2="362" stroke="url(#gradLeft)" stroke-width="56" stroke-linecap="round" />
+  </g>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <!-- Definitions for Gradients and Shadows -->
+  <defs>
+    <radialGradient id="ogBg" cx="50%" cy="0%" r="100%" fx="50%" fy="0%">
+      <stop offset="0%" stop-color="#1A1A24" />
+      <stop offset="100%" stop-color="#050505" />
+    </radialGradient>
+    <linearGradient id="ogGradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007A" />
+      <stop offset="100%" stop-color="#7928CA" />
+    </linearGradient>
+    <linearGradient id="ogGradRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2E93" />
+      <stop offset="100%" stop-color="#FF8A00" />
+    </linearGradient>
+    <filter id="ogAmbient" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" result="blur" />
+    </filter>
+    <filter id="ogShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#FF007A" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Matte Background -->
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+
+  <!-- Centered Ambient Glow -->
+  <circle cx="600" cy="315" r="350" fill="#E5007D" opacity="0.08" filter="url(#ogAmbient)"/>
+  
+  <!-- Flawless Centered Content Container -->
+  <g transform="translate(600, 150)">
+    <!-- The Glowing Ribbon Mark they loved -->
+    <g transform="translate(-40, -60)" filter="url(#ogShadow)">
+      <rect width="80" height="80" rx="24" fill="#111111" stroke="#333333" stroke-width="1" />
+      <line x1="56" y1="22" x2="36" y2="58" stroke="url(#ogGradRight)" stroke-width="12" stroke-linecap="round" />
+      <line x1="24" y1="22" x2="44" y2="58" stroke="url(#ogGradLeft)" stroke-width="12" stroke-linecap="round" />
+    </g>
+
+    <!-- Perfectly Centered Brand Name -->
+    <text x="-8" y="70" text-anchor="end" font-family="'Archivo Black', 'Inter', sans-serif" font-weight="900" font-size="42" letter-spacing="0.05em" fill="#FFFFFF">
+      VAYAM
+    </text>
+    <text x="8" y="70" text-anchor="start" font-family="'Instrument Serif', Georgia, serif" font-style="italic" font-weight="400" font-size="52" fill="#E5007D">
+      Media
+    </text>
+  </g>
+
+  <!-- Massive Hero Typography (Centered to avoid any clipping) -->
+  <!-- Website font: Archivo Black -->
+  <text x="600" y="340" text-anchor="middle" font-family="'Archivo Black', 'Inter', sans-serif" font-weight="900" font-size="76" letter-spacing="-0.02em" fill="#FFFFFF">
+    GROWTH DRIVEN
+  </text>
+  
+  <!-- Website font: Instrument Serif Italic -->
+  <text x="600" y="440" text-anchor="middle" font-family="'Instrument Serif', Georgia, serif" font-style="italic" font-weight="400" font-size="88" fill="url(#ogGradRight)">
+    Digital Marketing Agency.
+  </text>
+
+  <!-- Founder Tag -->
+  <rect x="460" y="500" width="280" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+  <text x="600" y="523" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="600" font-size="12" letter-spacing="0.2em" fill="#FF8A00" text-transform="uppercase">
+    FOUNDED BY AVADESH AGARWAL
+  </text>
+
+  <!-- Strict Grid Footer to keep edges clean -->
+  <line x1="80" y1="580" x2="1120" y2="580" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1"/>
+  
+  <text x="80" y="605" text-anchor="start" font-family="'Inter', sans-serif" font-weight="500" font-size="14" fill="#888888">
+    vayammedia.com
+  </text>
+  
+  <text x="600" y="605" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="500" font-size="14" fill="#888888">
+    SEO • Google &amp; Meta Ads • Web Dev • AI Automation
+  </text>
+  
+  <text x="1120" y="605" text-anchor="end" font-family="'Inter', sans-serif" font-weight="700" font-size="14" fill="#E5007D">
+    +91 79764 39089
+  </text>
+</svg>

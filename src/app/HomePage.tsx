@@ -59,9 +59,9 @@ export default function HomePage() {
           <span className="text-eyebrow block mb-6">Vayam Media — Growth Driven Digital Marketing Agency</span>
           <h1 className="text-display text-[11.5vw] md:text-[9.5vw] lg:text-[8.5vw] leading-none mb-8">
             <RevealText stagger={0.1}>
-              <span>Fuel your</span>
+              <span>Your performance</span>
               <span>
-                digital <span className="text-accent-word">growth.</span>
+                marketing <span className="text-accent-word">agency.</span>
               </span>
             </RevealText>
           </h1>
@@ -78,7 +78,7 @@ export default function HomePage() {
                 Start a project
               </Link>
               <Link href="/services" className="link-sweep font-medium text-ink relative overflow-hidden group">
-                See services
+                See our marketing services
                 <span className="absolute bottom-0 left-0 w-full h-[1px] bg-ink transform -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
               </Link>
             </FadeIn>
@@ -208,7 +208,7 @@ export default function HomePage() {
 
         <div className="text-center mt-12">
           <Link href="/contact" className="inline-flex items-center gap-2 text-xl md:text-2xl font-medium hover:text-magenta transition-colors group">
-            Like the sound of that? Start a project 
+            Like the sound of that? Start a marketing project
             <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
           </Link>
         </div>

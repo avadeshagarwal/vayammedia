@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import AboutPage from './AboutPage';
+import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about Vayam Media, founded by Avadesh Agarwal. A performance marketing & digital growth agency based in Jaipur, Churu, and Remote globally.',
+  title: 'About Vayam Media | Performance Marketing Agency',
+  description: 'Learn about Vayam Media, founded by Avadesh Agarwal. A performance marketing & digital growth agency based in Rajasthan, serving globally.',
   alternates: {
-    canonical: '/about',
+    canonical: 'https://vayammedia.com/about',
   },
   openGraph: {
     title: 'About Vayam Media — Performance Marketing Agency',
@@ -14,6 +15,19 @@ export const metadata: Metadata = {
   },
 };
 
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@id": "https://vayammedia.com/#organization"
+  }
+};
+
 export default function About() {
-  return <AboutPage />;
+  return (
+    <>
+      <JsonLd schema={aboutSchema} />
+      <AboutPage />
+    </>
+  );
 }

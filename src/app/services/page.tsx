@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import ServicesPage from './ServicesPage';
+import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Our Services',
-  description: 'Full-service digital agency offerings: Google Ads, Meta Ads, Performance Marketing, SEO, Shopify Development, Landing Page CRO, Branding, Content Creation, and AI Automation.',
+  title: 'Digital Marketing Services | Vayam Media',
+  description: 'Full-service digital agency offerings in Rajasthan: Google Ads, Meta Ads, Performance Marketing, SEO, Shopify Development, Landing Page CRO, and Branding.',
   alternates: {
-    canonical: '/services',
+    canonical: 'https://vayammedia.com/services',
   },
   openGraph: {
     title: 'Services — Vayam Media Performance Marketing & Development',
@@ -14,6 +15,43 @@ export const metadata: Metadata = {
   },
 };
 
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Google Ads Management"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Meta Ads (Facebook & Instagram)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Performance Marketing"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "SEO (Search Engine Optimization)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Shopify Development"
+    }
+  ]
+};
+
 export default function Page() {
-  return <ServicesPage />;
+  return (
+    <>
+      <JsonLd schema={servicesSchema} />
+      <ServicesPage />
+    </>
+  );
 }

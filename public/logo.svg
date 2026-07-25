@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradLeftL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007A" />
+      <stop offset="100%" stop-color="#7928CA" />
+    </linearGradient>
+    <linearGradient id="gradRightL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2E93" />
+      <stop offset="100%" stop-color="#FF8A00" />
+    </linearGradient>
+    <filter id="shadowL" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#FF007A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- The "V" Mark -->
+  <g transform="translate(20, 20)">
+    <rect width="80" height="80" rx="20" fill="#FFFFFF" stroke="#F0F0F0" stroke-width="1" />
+    <g filter="url(#shadowL)">
+      <line x1="56" y1="22" x2="36" y2="58" stroke="url(#gradRightL)" stroke-width="12" stroke-linecap="round" />
+      <line x1="24" y1="22" x2="44" y2="58" stroke="url(#gradLeftL)" stroke-width="12" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Typography matched to website fonts -->
+  <text x="125" y="66" font-family="'Archivo Black', 'Inter', sans-serif" font-weight="900" font-size="38" letter-spacing="0.02em" fill="#0A0A0A">
+    VAYAM
+  </text>
+  <text x="290" y="66" font-family="'Instrument Serif', Georgia, serif" font-style="italic" font-weight="400" font-size="44" letter-spacing="0.02em" fill="#E5007D">
+    Media
+  </text>
+  <text x="127" y="88" font-family="'Inter', sans-serif" font-weight="600" font-size="10" letter-spacing="0.25em" fill="#888888" text-transform="uppercase">
+    Premium Digital Growth Agency
+  </text>
+</svg>

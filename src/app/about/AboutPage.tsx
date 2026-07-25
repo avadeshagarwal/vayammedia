@@ -55,9 +55,9 @@ export default function AboutPage() {
         </FadeIn>
         <h1 className="text-display text-[11.5vw] md:text-[9.5vw] lg:text-[8.5vw] leading-[0.85]">
           <RevealText>
-            <span>We don&apos;t do</span>
+            <span>Your growth</span>
             <span>
-              <span className="text-accent-word lowercase pr-4">average.</span>
+              <span className="text-accent-word lowercase pr-4">partner.</span>
             </span>
           </RevealText>
         </h1>

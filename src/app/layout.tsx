@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import PageTransition from "@/components/layout/PageTransition";
-import JsonLd from "@/components/seo/JsonLd";
+import CustomCursor from "@/components/animations/CustomCursor";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   creator: "Avadesh Agarwal",
   publisher: "Vayam Media",
   alternates: {
-    canonical: "/",
+    canonical: "https://vayammedia.com",
   },
   openGraph: {
     title: "Vayam Media — Growth Driven Digital Marketing Agency",
@@ -46,6 +46,14 @@ export const metadata: Metadata = {
     siteName: "Vayam Media",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://vayammedia.com/opengraph-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Vayam Media",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -53,6 +61,7 @@ export const metadata: Metadata = {
     description:
       "Growth-driven digital marketing agency founded by Avadesh Agarwal.",
     creator: "@vayammedia",
+    images: ["https://vayammedia.com/opengraph-image.svg"],
   },
   robots: {
     index: true,
@@ -77,10 +86,8 @@ export default function RootLayout({
       lang="en"
       className={`${archivoBlack.variable} ${inter.variable} ${instrumentSerif.variable} antialiased`}
     >
-      <head>
-        <JsonLd />
-      </head>
       <body>
+        <CustomCursor />
         <SmoothScroll>
           <Header />
           <main>
