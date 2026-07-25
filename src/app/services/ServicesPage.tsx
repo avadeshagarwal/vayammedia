@@ -7,105 +7,7 @@ import FadeIn from '@/components/animations/FadeIn';
 import RevealText from '@/components/animations/RevealText';
 import MagneticButton from '@/components/animations/MagneticButton';
 import { cn } from '@/lib/utils';
-
-// Services data
-const services = [
-  {
-    num: "01",
-    title: "Google Ads",
-    description: "Dominating search intent with precision-engineered PPC campaigns across Search, Display, Shopping, and YouTube to capture high-converting traffic.",
-    deliverables: ["Campaign architecture", "Keyword strategy", "Ad copy & extensions", "Bid optimization", "Conversion tracking"]
-  },
-  {
-    num: "02",
-    title: "Meta Ads",
-    description: "Harnessing the power of Facebook and Instagram through scroll-stopping creative and sophisticated audience targeting to build profitable customer acquisition engines.",
-    deliverables: ["Audience targeting", "Creative strategy", "A/B testing", "Retargeting funnels", "Performance dashboards"]
-  },
-  {
-    num: "03",
-    title: "Performance Marketing",
-    description: "A holistic, data-driven approach to paid media that scales your revenue predictably through rigorous testing and full-funnel strategy.",
-    deliverables: ["Channel mix planning", "Attribution modeling", "Budget allocation", "ROAS optimization", "Growth roadmaps"]
-  },
-  {
-    num: "04",
-    title: "SEO",
-    description: "Securing prime real estate on search engines. We build sustainable organic visibility that compounds over time and drives high-intent traffic.",
-    deliverables: ["Technical audits", "On-page optimization", "Content strategy", "Link building", "Rank tracking"]
-  },
-  {
-    num: "05",
-    title: "Shopify Development",
-    description: "Architecting high-converting, lightning-fast e-commerce experiences on Shopify that turn casual browsers into loyal brand advocates.",
-    deliverables: ["Custom themes", "App integrations", "Checkout optimization", "Migration support", "Speed optimization"]
-  },
-  {
-    num: "06",
-    title: "Website Development",
-    description: "Building robust, scalable, and stunning digital platforms optimized for both user experience and search engine performance.",
-    deliverables: ["UI/UX design", "Frontend development", "CMS integration", "Performance optimization", "Analytics setup"]
-  },
-  {
-    num: "07",
-    title: "Landing Pages",
-    description: "Designing and developing hyper-focused landing pages engineered specifically to maximize conversion rates and reduce acquisition costs.",
-    deliverables: ["Wireframing", "Copywriting", "A/B testing", "Heat-map analysis", "CRO recommendations"]
-  },
-  {
-    num: "08",
-    title: "Branding",
-    description: "Forging memorable visual identities that capture your brand's essence and resonate deeply with your target demographic.",
-    deliverables: ["Logo design", "Brand guidelines", "Color systems", "Typography", "Brand voice"]
-  },
-  {
-    num: "09",
-    title: "Social Media Management",
-    description: "Cultivating engaged communities and amplifying your brand narrative across platforms with strategic, culturally relevant content.",
-    deliverables: ["Content calendars", "Community management", "Engagement strategy", "Analytics reporting", "Trend monitoring"]
-  },
-  {
-    num: "10",
-    title: "Content Creation",
-    description: "Producing compelling, high-quality assets that tell your story, educate your audience, and drive meaningful engagement.",
-    deliverables: ["Photography direction", "Graphic design", "Copywriting", "Blog articles", "Email campaigns"]
-  },
-  {
-    num: "11",
-    title: "Video Editing",
-    description: "Transforming raw footage into polished, platform-native video content designed to capture attention and maximize retention.",
-    deliverables: ["Short-form edits", "Long-form content", "Motion graphics", "Subtitling", "Platform optimization"]
-  },
-  {
-    num: "12",
-    title: "AI Automation",
-    description: "Streamlining operations and enhancing customer experiences by integrating intelligent automation into your critical business workflows.",
-    deliverables: ["Chatbot development", "Email automation", "Lead scoring", "Reporting dashboards", "Process optimization"]
-  }
-];
-
-const processSteps = [
-  {
-    num: "1",
-    title: "Discover",
-    desc: "We audit your current setup, study your market, and identify the gaps costing you growth."
-  },
-  {
-    num: "2",
-    title: "Strategize",
-    desc: "We build a custom roadmap with clear KPIs, timelines, and budget allocations."
-  },
-  {
-    num: "3",
-    title: "Execute",
-    desc: "We launch, test, and iterate — moving fast without breaking things."
-  },
-  {
-    num: "4",
-    title: "Scale",
-    desc: "We double down on what works and expand into new channels and markets."
-  }
-];
+import { servicesData as services, processSteps } from '@/lib/services-data';
 
 export default function ServicesPage() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -122,12 +24,14 @@ export default function ServicesPage() {
           <p className="text-eyebrow text-ink/60 mb-6">Our services</p>
         </FadeIn>
         
-        <RevealText className="text-[11.5vw] md:text-[9.5vw] lg:text-[8.5vw] text-display leading-none mb-8 text-ink">
-          <span>Everything you need</span>
-          <span>
-            to <span className="text-accent-word lowercase">grow.</span>
-          </span>
-        </RevealText>
+        <h1 className="text-[11.5vw] md:text-[9.5vw] lg:text-[8.5vw] text-display leading-none mb-8 text-ink">
+          <RevealText>
+            <span>Digital marketing</span>
+            <span>
+              <span className="text-accent-word lowercase">services.</span>
+            </span>
+          </RevealText>
+        </h1>
 
         <FadeIn delay={0.4}>
           <p className="text-lg md:text-xl text-ink/70 max-w-2xl font-medium">
@@ -193,14 +97,21 @@ export default function ServicesPage() {
                       
                       <div>
                         <h4 className="text-eyebrow text-ink mb-6">Deliverables</h4>
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 mb-8">
                           {service.deliverables.map((item, i) => (
                             <li key={i} className="text-ink/80 flex items-start">
-                              <span className="text-magenta mr-3 mt-1.5 w-1.5 h-1.5 rounded-full bg-magenta flex-shrink-0" />
+                              <span className="text-magenta mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" />
                               {item}
                             </li>
                           ))}
                         </ul>
+                        <Link 
+                          href={`/services/${service.slug}`}
+                          className="link-sweep font-medium text-magenta relative overflow-hidden group inline-flex"
+                        >
+                          Learn more about {service.title}
+                          <span className="absolute bottom-0 left-0 w-full h-[1px] bg-magenta transform -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                        </Link>
                       </div>
                     </div>
                   </motion.div>
